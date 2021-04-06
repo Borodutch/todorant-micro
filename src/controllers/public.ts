@@ -8,7 +8,7 @@ export default class PublicController {
     try {
       await new EventModel(body).save()
     } catch (err) {
-      return ctx.throw(400, err)
+      return ctx.throw(400, err.message)
     }
   }
 }
