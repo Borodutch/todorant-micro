@@ -13,6 +13,8 @@ export class Event {
   language: string
   @prop({ required: true, index: true })
   userAgent: string
+  @prop({ required: true, index: true, default: false })
+  debug: boolean
   @prop({ index: true })
   density?: string
 }
