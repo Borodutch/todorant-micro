@@ -15,8 +15,12 @@ export class Event {
   userAgent: string
   @prop({ required: true, index: true, default: false })
   debug: boolean
+  @prop({ required: true, index: true, default: false })
+  isAnonymous: boolean
   @prop({ index: true })
   density?: string
+  @prop({ index: true })
+  installationId?: string
 }
 
 export const EventModel = getModelForClass(Event, {
